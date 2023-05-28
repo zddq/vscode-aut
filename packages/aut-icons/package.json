@@ -1,9 +1,9 @@
 {
   "name": "aut-icons",
-  "icon": "./images/logo.png",
+  "icon": "./assets/logo.png",
   "displayName": "Aut Icons",
   "description": "custom file or folder icon",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "zddq",
   "license": "MIT",
   "scripts": {
