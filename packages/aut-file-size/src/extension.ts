@@ -38,7 +38,10 @@ export function activate(context: vscode.ExtensionContext) {
 
   // 切换 vscode 文本编辑器窗口时触发
   eventCollection.changeActiveTextEditor = window.onDidChangeActiveTextEditor((textEditor) => {
-    if (!textEditor) return;
+    if (!textEditor) {
+      eventCollection.statusBar.text = '';
+      return;
+    }
 
     updateSize(textEditor.document);
   });
