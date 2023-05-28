@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.3] 2023-05-29
+
+### Fixed
+
+- 修复仓库地址访问地址
+
 ## [1.0.2] - 2023-05-28
 
 ### Changed

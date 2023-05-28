@@ -3,7 +3,7 @@
   "icon": "./assets/logo.png",
   "displayName": "Aut Icons",
   "description": "custom file or folder icon",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "zddq",
   "license": "MIT",
   "scripts": {
@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zddq/vscode.git",
+    "url": "https://github.com/zddq/vscode-aut.git",
     "directory": "packages/ant-icons"
   },
   "engines": {
