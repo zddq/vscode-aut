@@ -3,7 +3,7 @@
   "icon": "./assets/logo.jpg",
   "displayName": "Aut File Size",
   "description": "在 VSCode 底部状态栏显示当前文件大小信息",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "zddq",
   "license": "MIT",
   "main": "./out/extension.js",
