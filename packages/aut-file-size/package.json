@@ -1,0 +1,86 @@
+{
+  "name": "aut-file-size",
+  "icon": "./assets/logo.png",
+  "displayName": "Aut File Size",
+  "description": "在底部状态栏显示当前文件大小信息",
+  "version": "1.0.0",
+  "publisher": "zddq",
+  "license": "MIT",
+  "main": "./out/extension.js",
+  "scripts": {
+    "watch": "tsc -watch -p ./",
+    "compile": "tsc -p ./",
+    "vscode:prepublish": "pnpm run compile",
+    "package": "vsce package --no-dependencies",
+    "publish": "vsce publish --no-dependencies"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.78.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "eslint": "^8.36.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^4.9.5",
+    "@vscode/test-electron": "^2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zddq/vscode.git",
+    "directory": "packages/ant-icons"
+  },
+  "engines": {
+    "vscode": "^1.78.0",
+    "node": ">=14.0.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "aut",
+    "aut file",
+    "aut-file",
+    "aut file size",
+    "aut-file-size",
+    "file",
+    "file size",
+    "file-size",
+    "fileSize",
+    "size",
+    "status bar"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "contributes": {
+    "configuration": [
+      {
+        "title": "aut-file-size",
+        "properties": {
+          "aut-file-size.position": {
+            "type": "string",
+            "default": "left",
+            "description": "set left or right  设置显示位置. E.g \"aut-file-size.position\":\"left\""
+          },
+          "aut-file-size.priority": {
+            "type": "integer",
+            "default": 0,
+            "description": "Higher values mean the item should be shown more to the left. 设置优先级，值越大越往左"
+          },
+          "aut-file-size.color": {
+            "type": "string",
+            "default": "#f2481b",
+            "description": "text color, 文案颜色"
+          },
+          "aut-file-size.tooltip": {
+            "type": "string",
+            "default": "current text editor file size, 当前活动窗口文件大小"
+          }
+        }
+      }
+    ]
+  }
+}

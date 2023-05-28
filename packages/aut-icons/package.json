@@ -1,0 +1,64 @@
+{
+  "name": "aut-icons",
+  "icon": "./images/logo.png",
+  "displayName": "Aut Icons",
+  "description": "custom file or folder icon",
+  "version": "1.0.1",
+  "publisher": "zddq",
+  "license": "MIT",
+  "scripts": {
+    "build-json": "ts-node src/index.ts",
+    "build-package": "vsce package --no-dependencies",
+    "build": "npm run build-json && npm run build-package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "@types/node": "~16.18.23",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "eslint": "^8.38.0",
+    "fs-extra": "^11.1.1",
+    "ts-loader": "^9.4.2",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.4",
+    "webpack": "^5.79.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zddq/vscode.git",
+    "directory": "packages/ant-icons"
+  },
+  "engines": {
+    "vscode": "^1.40.2",
+    "node": ">=12.4.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "keywords": [
+    "aut",
+    "aut icon",
+    "aut icon theme",
+    "aut icons",
+    "aut icons theme",
+    "icon",
+    "icon theme",
+    "theme"
+  ],
+  "contributes": {
+    "iconThemes": [
+      {
+        "id": "aut-icons",
+        "label": "Aut Icons",
+        "path": "/icons/vs-aut-icon-theme.json"
+      }
+    ]
+  }
+}
