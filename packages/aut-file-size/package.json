@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "aut-file-size",
   "icon": "./assets/logo.jpg",
   "displayName": "Aut File Size",

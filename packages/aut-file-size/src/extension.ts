@@ -1,8 +1,8 @@
-import vscode from 'vscode';
-import fs from 'node:fs';
+import fs from "node:fs";
+import vscode from "vscode";
 
-import { IFileSizeEventCollection } from './types';
-import { TOOLS } from './utils';
+import { IFileSizeEventCollection } from "./index.type";
+import { getSizeStr } from "./tool";
 
 const { workspace, window } = vscode;
 
@@ -16,8 +16,8 @@ const eventCollection: IFileSizeEventCollection = {
 
 /** @name 获取状态栏信息 */
 function getStatusBar() {
-  const configuration = workspace.getConfiguration('aut-file-size');
-  eventCollection.statusBar = window.createStatusBarItem(configuration.get('position') === 'left' ? vscode.StatusBarAlignment.Left : vscode.StatusBarAlignment.Right, configuration.get('priority'));
+  const configuration = workspace.getConfiguration("aut-file-size");
+  eventCollection.statusBar = window.createStatusBarItem(configuration.get("position") === "left" ? vscode.StatusBarAlignment.Left : vscode.StatusBarAlignment.Right, configuration.get("priority"));
   eventCollection.statusBar.show();
 }
 
@@ -27,7 +27,7 @@ function getStatusBar() {
  */
 function updateSize(doc: vscode.TextDocument) {
   const size = fs.statSync(doc.fileName).size;
-  const sizeMan = TOOLS.sizeConvert(size);
+  const sizeMan = getSizeStr(size);
   eventCollection.statusBar.text = sizeMan;
 }
 
@@ -39,7 +39,7 @@ export function activate(context: vscode.ExtensionContext) {
   // 切换 vscode 文本编辑器窗口时触发
   eventCollection.changeActiveTextEditor = window.onDidChangeActiveTextEditor((textEditor) => {
     if (!textEditor) {
-      eventCollection.statusBar.text = '';
+      eventCollection.statusBar.text = "";
       return;
     }
 

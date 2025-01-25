@@ -1,5 +1,9 @@
 # Change Log
 
+## [1.0.6] 2025-01-25
+
+- 完善 QB RB YB ZB EB PB TB GB MB KB B 文件大小单位
+
 ## [1.0.4] 2023-05-29
 
 ### Fixed
