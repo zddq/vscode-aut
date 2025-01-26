@@ -14,5 +14,5 @@
     "curly": "off",
     "semi": "off"
   },
-  "ignorePatterns": ["out", "dist", "**/*.d.ts"]
+  "ignorePatterns": ["dist", "**/*.d.ts"]
 }
