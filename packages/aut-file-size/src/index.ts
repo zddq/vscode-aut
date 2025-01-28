@@ -1,7 +1,6 @@
 import fs from "node:fs";
 import vscode from "vscode";
 
-import { IFileSizeEventCollection } from "./index.type";
 import { getSizeStr } from "./tool";
 
 const { workspace, window } = vscode;
